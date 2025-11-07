@@ -7,39 +7,30 @@
 
 # Si el usuario ingresa un sabor que no existe, mostrar "Sabor no disponible".
 # Si el sabor es válido, preguntar si quiere topping y calcular total.
+while True:    
+    sabores = {"chocolate" : 4000,
+               "fresa": 2500,
+               "mandarina": 3800,
+               "limon": 5200}
 
-while True:
+    topping = 1000
+
+    sabor = input(f"Por favor ingrese el sabor a elegir, tenemos: {sabores} ----> ").lower()
+
+    while sabor not in sabores:
+        sabor = input(f"Sabor no disponible, tenemos: {sabores} Por favor escriba solo uno de los sabores disponibles: ----> ").lower()
     
-    print("Heladería “Frosty” — Sabor y topping")
+    add = input(f"Quiere añadir topping vor valor de {topping}? \n Escriba Si o No \n ----> ").lower()
+    while add not in ("si", "no"):
+        add = input(f"{add} No es una respuesta aceptable. Escriba Si o No \n ----> ").lower()
 
-    print("1. Chocolate")
-    print("2. Vainilla")
+    total = sabores[sabor]
 
-    opcion = (input("Ingrese el número correspondiente al sabor que desea comprar: "))
+    if add == "no":
 
-
-
-    valorCho = 4000
-    valorVa = 3500
-    valorTop = 1000
-    
-    print(f"Desea incluir topping por valor de ${valorTop}?")
-    print("1. Si")
-    print("2. no")
-    add = input("Ingrese su respuesta")
-
-    if opcion == "1":
-        if add == "1":
-            print(f"Disfruta tu helado de chocolate con topping, total a pagar {valorCho + valorTop}")
-        else:
-            print(f"Disfruta tu helado de chocolate por valor de {valorCho}")
-
-
-    elif opcion == "2":
-        if add == "1":
-            print(f"Disfruta tu helado de vainilla con topping, total a pagar {valorVa + valorTop}")
-        else:
-            print(f"Disfruta tu helado de vainilla por valor de {valorVa}")
+        print(f"Total a pagar: {total}")
 
     else:
-        print("No hay sabores diferentes a chocolate o vainilla")
+        total += topping
+        print(f"Gracias por su compra, total a pagar {total}")
+
