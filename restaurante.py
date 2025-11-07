@@ -6,7 +6,7 @@ bebida = 3000
 menuConBebida = menu + bebida
 
 #Iva
-iva = 0.8
+iva = 0.08
 ivaMenu = menu * iva
 ivaMenuBebida = menuConBebida * iva
 
@@ -29,4 +29,4 @@ elif decision == 2:
     
 else:
     print("Valor no válido")
-    #Mensaje cualquiera para git
+    
