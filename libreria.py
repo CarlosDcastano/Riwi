@@ -1,10 +1,7 @@
 print("Bienvenido a su librería 'el saber'")
 
-esEstudiante = input("¿Es un estudiante? 1. Si   2. No      ")
-
+#Precio libro
 libro = 25000
-cantidadLibros = int(input("Ingrese la cantidad de libros a comprar: "))
-total = libro * cantidadLibros
 
 #Descuento de estudiantes
 descEst = 0.15
@@ -13,10 +10,22 @@ descEst = 0.15
 cupon = "LIBRO10"
 descCup = 0.10
 
+esEstudiante = input("¿Es un estudiante? 1. Si   2. No      ")
+
+while esEstudiante not in ("1","2"):
+    esEstudiante = input("Opción no válida, debe ingresar 1 o 2 ----> ")
+
+
+cantidadLibros = int(input("Ingrese la cantidad de libros a comprar: "))
+while cantidadLibros <=0:
+    cantidadLibros = input("Opción no válida, debe ingresar 1 o 2 ----> ")
+
+total = libro * cantidadLibros
+
 if esEstudiante == "2":
     total = total
 
-elif esEstudiante == "1":
+else:
     total = total - (total * descEst)
     tieneCupon = input("¿Tiene un cupon para redimir? 1. Si    2. No   ")
     if tieneCupon == "1":
@@ -25,8 +34,5 @@ elif esEstudiante == "1":
             total = total -(total * descCup)
         else:
             print(f"Cupon ingresado '{cuponEst}' no válido,")
-
-else:
-    print("Opción no válida")
-
-print(total)
+            
+print("Total a pagar: ", total)
