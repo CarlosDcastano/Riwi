@@ -18,14 +18,11 @@ while esEstudiante not in ("1","2"):
 
 cantidadLibros = int(input("Ingrese la cantidad de libros a comprar: "))
 while cantidadLibros <=0:
-    cantidadLibros = input("Opción no válida, debe ingresar 1 o 2 ----> ")
+    cantidadLibros = int(input("Opción no válida, debe ingresar 1 o 2 ----> "))
 
 total = libro * cantidadLibros
 
-if esEstudiante == "2":
-    total = total
-
-else:
+if esEstudiante == 1:
     total = total - (total * descEst)
     tieneCupon = input("¿Tiene un cupon para redimir? 1. Si    2. No   ")
     if tieneCupon == "1":
