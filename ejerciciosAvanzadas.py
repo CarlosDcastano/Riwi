@@ -1,0 +1,192 @@
+"""1. Restaurante “Buen Sabor” – Cálculo de propina
+Como mesero, quiero una función calcular_propina(total_cuenta) 
+que reciba el valor total de la cuenta y calcule la propina del 10%.
+Si el total es mayor de $100.000, aplicar el 15%.
+El programa debe mostrar el total final a pagar."""
+
+# def calcular_propina(total_cuenta):
+#     prop = 0.90
+#     desc = 0.85
+#     total_cuenta *= prop 
+#     if total_cuenta > 100000:
+#         total_cuenta *= desc
+#         return total_cuenta
+#     else:
+#         return total_cuenta
+    
+# total = int(input("Ingrese el total: "))
+
+# print(calcular_propina(total))
+
+"""2. Gimnasio “Level Up” – Control de repeticiones
+Como entrenador, quiero una función repeticiones(n) 
+que use un bucle for para mostrar las repeticiones del 1 al número indicado.
+Si el número actual es par, mostrar “Excelente forma”, 
+si no, “Mantén el ritmo”."""
+
+# def repeticiones(n):
+#     for i in range(1, n+1):
+#         if i % 2 == 0:
+#             print("Excelente forma")
+#         print("Mantén el ritmo")
+
+# n = int(input("Ingrese el número de repeticiones deseadas: "))
+
+# repeticiones(n)
+
+
+"""3. Tienda “LoopShop” – Descuentos acumulados
+Como vendedor, quiero una función aplicar_descuentos() que pida varios 
+precios hasta que el usuario escriba 0.
+Si el precio supera 50.000, aplicar 10% de descuento.
+Al final, mostrar la suma total de las compras con descuento."""
+
+
+# def aplicar_descuento():
+#     precio = 1
+#     total = 0
+#     desc = 0.90
+#     while precio != 0:
+#         precio = int(input("Ingrese el precio: "))
+#         if precio > 50000:
+#             precio *= desc
+#         total +=precio
+#         print(f"Hasta ahora van {total}")
+#     else:
+#         print(f"Su total es {total}")
+        
+# aplicar_descuento()
+
+"""4. Banco “PythonBank” – Evaluador de crédito
+Como asesor financiero, quiero una función evaluar_credito(ingresos, edad) que:
+
+Apruebe el crédito si los ingresos son mayores de 2 millones
+y la edad está entre 25 y 60.
+Si no cumple, mostrar “Crédito rechazado”.
+Usar condicionales dentro de la función.
+"""
+
+# def evaluar_credito(ingresos, edad):
+#     if ingresos < 2000000 or edad not in range(25, 61):
+#         print("Crédito rechazado")
+#     else:
+#         print("Crédito aprobado")
+
+# ingresos = int(input("Ingrese los ingresos mensuales: "))
+# edad = int(input("Ingrese la edad: "))
+# evaluar_credito(ingresos, edad)
+
+"""5. Escuela “Aprende Más” – Promedio de notas
+Como profesor, quiero una función promedio_notas() 
+que reciba tres notas y calcule el promedio.
+Si el promedio es mayor o igual a 3.0 → mostrar “Aprobado”, 
+de lo contrario “Reprobado”.
+Debe repetirse para varios estudiantes usando un while."""
+
+
+
+# def promedio_notas(a,b,c):
+#         prom = (a+b+c) / 3
+#         if prom >= 3.0:
+#             return "Aprobado"
+#         else:
+#             return "Reprobado"
+
+
+# estudiantes = int(input("Ingrese la cantidad de estudiantes: "))
+# i = 1
+
+# while i <= estudiantes:
+#     nota1 = int(input(f"Ingrese la nota 1 para el estudiante {i}: "))
+#     nota2 = int(input(f"Ingrese la nota 2 para el estudiante {i}: "))
+#     nota3 = int(input(f"Ingrese la nota 3 para el estudiante {i}: "))
+#     print(promedio_notas(nota1,nota2,nota3))
+#     i +=1
+
+"""6. Estación “LoopBus” – Simulador de pasajeros
+Como conductor, quiero una función simular_viaje(pasajeros) 
+que recorra con un for cada pasajero y muestre “Pasajero X a bordo”.
+Si llega a 10 pasajeros, mostrar “Bus lleno” y detener el bucle."""
+
+# def simular_viaje(pasajeros):
+#     for i in range (1, pasajeros):
+#         if i >= 10:
+#             print("Bus lleno")
+#             break
+#         else:
+#             print(f"Pasajero {i} a bordo")
+        
+        
+# pasajeros = int(input("Ingrese la cantidad de pasajeros: "))
+
+# simular_viaje(pasajeros)
+            
+            
+"""7. Panadería “Don Pancho” – Control de producción diaria
+Como panadero, quiero una función hornear_pan(lotes) que use un for 
+para indicar qué lote se está horneando.
+Si el lote es divisible por 3, mostrar “Verificación de calidad”.
+Al final, mostrar “Producción terminada”.""" 
+    
+# def hornear_pan(lotes):
+#     for lote in range(1, lotes+1):
+#         if lote % 3 == 0:
+#             print(f"lote {lote} Verificación de calidad")
+#         else:
+#             print(f"Se está horneando el lote {lote}")
+#     print("Producción terminada")
+    
+    
+# lotes = int(input("Ingrese la cantidad de lotes: "))
+
+# hornear_pan(lotes)
+
+"""Como cajero, quiero una función calcular_entradas() que pida 
+edades de los clientes hasta que se ingrese 0.
+Aplicar precio:
+
+    Menores de 12 → $5.000
+    De 12 a 59 → $8.000
+    Mayores de 60 → $4.000
+    Usar un while y condiciones.
+"""
+
+# def calcular_entradas():
+#     edad = int(input("Ingrese la edad, o ingrese 0 para salir: "))
+#     while edad != 0:
+        
+#         if edad < 0:
+#             print("Edad no válida")
+#         elif edad < 12:
+#             print("$5.000")
+#         elif edad < 60:
+#             print("$8.000")
+#         else:
+#             print("$4.000")
+#         edad = int(input("Ingrese la edad, o ingrese 0 para salir: "))
+
+# calcular_entradas()
+
+"""9. Tienda “EnergyStore” – Simulador de puntos
+Como cliente, quiero una función calcular_puntos(compras) que use un for 
+para recorrer la cantidad de compras (ingresada por el usuario).
+Si el número de compra es múltiplo de 3, agregar 10 puntos; en caso 
+contrario, agregar 5.
+Al final, mostrar los puntos totales."""
+
+def calcular_puntos(compras):
+    puntos = 0
+    for i in range(1, compras):
+        if i %3 == 0:
+            puntos += 10
+            print(puntos)
+        else:
+            puntos += 5
+            print(puntos)
+    print("Total de puntos: ", puntos)
+        
+compras = int(input("Ingrese la cantidad de compras: "))
+
+calcular_puntos(compras)
+            
+

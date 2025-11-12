@@ -79,21 +79,159 @@ Si no, solo mostrar “Ejercicio X completado”."""
 Como operador, quiero usar un while que sume litros hasta superar 100.
 Cada vez que se venda una cantidad, verificar:
 
-    Si el total aún es menor que 100 → mostrar “Sigue vendiendo”.
-    Si llega o supera 100 → mostrar “Meta diaria alcanzada”.
-
-"""
+Si el total aún es menor que 100 → mostrar “Sigue vendiendo”.
+Si llega o supera 100 → mostrar “Meta diaria alcanzada”."""
 
 # litros = 0
+# total = 0
+# while total < 100:
+#     litros = int(input("Ingrese la cantidad de litros para esta venta: "))
+#     total += litros
+#     if total < 100:
+# 	    print(f"{total} litros, sigue vendiendo")
+# else:
+# 	print(f"{total} litros. Meta diaria alcanzada")
 
-# while litros < 100:
-#     litros = int(input("Ingrese la cantidad de litros"))
-    
-    
-lista = []
+"""17. Panadería “Don Pancho” – Producción diaria
+Como panadero, quiero usar un for del 1 al 12.
+Si el número es 6, mostrar “Mitad de la producción completada”.
+Si es 12, mostrar “¡Día finalizado!”."""
 
-while True:
-    nombre = input("Ingrese su nombre")
-    lista.append(nombre)
-    print(lista)
-    
+# for i in range(1, 13):
+#     if i == 6:
+#         print(f"{i} Mitad de la producción completada")
+#     elif i == 12:
+#         print(f"{i} ¡Día finalizado!")
+#     else:
+#         print(f"{i}: Producción en curso")
+
+"""18. Academia de inglés – Repetición de palabras
+Como estudiante, quiero ingresar una palabra y usar un for para repetirla 5 veces.
+Si el contador es impar, mostrar la palabra en minúsculas.
+Si es par, mostrarla en mayúsculas."""
+
+# palabra = input("Ingrese una plalabra: ")
+
+# for i in range(1,6):
+#     if i % 2 == 0:
+#         print(palabra.upper())
+#     else:
+#         print(palabra.lower())
+
+"""19. Tienda de helados – Registro de clientes atendidos
+Como empleado, quiero usar un while que cuente clientes hasta que el número supere 15.
+Si el número es múltiplo de 5, mostrar “Pausa para limpieza”.
+Al final, mostrar “Turno finalizado”."""
+
+# clientes = 1
+
+# while clientes <=15:
+#     if clientes %5 == 0:
+#         print(f"Cliente: {clientes}, Pausa para limpieza.")
+#     else:
+#         print(f"Cliente: {clientes} atendido.")
+#     clientes +=1
+# else: 
+#     print("Turno finalizado")
+
+"""20. Aplicación “Inicio Seguro” – Intentos de inicio de sesión
+Como usuario, quiero usar un while con máximo 3 intentos de contraseña.
+Si acierto, mostrar “Acceso permitido”.
+Si agoto los intentos, mostrar “Acceso denegado”."""
+
+# contraseñaCorrecta = "123"
+# contraseñaUsuario = ""
+# contador = 0
+
+# while contraseñaUsuario != contraseñaCorrecta or contador <= 3:
+#     contraseñaUsuario = input("Ingrese la contraseña")
+#     contador +=1
+# else:
+#     print("Acceso permitido")
+
+# contraseñaCorrecta = "123"
+# contraseñaUsuario = ""
+# intentos = 0
+
+# while intentos <3:
+#     contraseñaUsuario = input("Ingrese la contraseña: ")
+#     if contraseñaUsuario == contraseñaCorrecta:
+#         print("Acceso permitido")
+#         break
+#     intentos +=1
+# else:
+#     print("Acceso denegado")
+
+
+"""21. Tienda “FuncionaShop” – Mensaje de bienvenida
+Como dueño de la tienda, quiero crear una función llamada saludo() que imprima “Bienvenido a FuncionaShop”.
+Luego, quiero llamarla desde el programa principal."""
+
+# def saludo():
+#     print("Bienvenido a FuncionaShop")
+
+# saludo()
+
+"""22. Gimnasio “StrongFit” – Cálculo de energía
+Como entrenador, quiero una función calcularEnergia() que reciba un número de repeticiones y devuelva un mensaje:
+
+Si las repeticiones son menores de 5 → “Necesitas más esfuerzo”.
+Si son 5 o más → “¡Buen trabajo!”."""
+
+# def calcularEnergia(a):
+#     if a < 5:
+#         print("Necesitas más esfuerzo")
+#     else:
+#         print("Buen trabajo")
+
+# energia = int(input("Ingrese el número de repeticiones realizadas: "))
+# calcularEnergia(energia)
+
+
+"""23. Banco “LoopBank” – Simulación de intereses
+Como analista financiero, quiero una función calcularInteres() que reciba un monto y una tasa (porcentaje) 
+y retorne el valor final después de aplicar el interés una vez.
+El programa principal debe pedir los datos y mostrar el resultado."""
+
+# def calcularInteres(monto, tasa):
+#     interes = monto * (tasa / 100)
+#     valorFinal = monto + interes
+#     return valorFinal
+
+# monto = float(input("Ingrese el monto: "))
+# tasa = float(input("Ingrese la tasa de interés (en %): "))
+# resultado = calcularInteres(monto, tasa)
+# print(f"El valor final después de aplicar el interés es: {resultado}")
+
+"""24. Escuela “Aprende con Funciones” – Promedio de notas
+Como profesor, quiero crear una función promedioNotas() que reciba tres notas y calcule el promedio.
+Si el promedio es mayor o igual a 3.0, mostrar “Aprobado”; si no, “Reprobado”."""
+
+# def promedioNotas(a,b,c):
+#     prom = (a+b+c) / 3  
+#     if prom >= 3.0:
+#         print("aprobado")
+#     else:
+#         print("reprobado")
+
+# promedioNotas(-1,2,3)	
+# promedioNotas(-5,1,3)
+
+"""25. Restaurante “BuenaFunción” – Verificación de turno
+Como gerente, quiero una función verificarTurno(hora) que determine:
+
+Si la hora es menor que 12 → “Turno de mañana”.
+Si está entre 12 y 18 → “Turno de tarde”.
+Si es mayor → “Turno de noche”.
+El programa principal debe pedir la hora e imprimir el resultado."""
+
+# def verificarTurno(hora):
+# 	if hora >0 and hora <12:
+# 		print("Turno de mañana")
+# 	elif hora >=12 and hora <= 18:
+# 		print("Turno de tarde")
+# 	else:
+# 		print("Turno de noche")
+
+# hora = int(input("Ingrese hora: "))
+# verificarTurno(hora)
