@@ -207,8 +207,8 @@ Si el resultado es mayor de 50, mostrar también “Resultado alto”."""
 # tabla_multiplicar(numero)
 
 """11. Aerolínea “FlyLoop” – Cálculo de millas acumuladas
-Como viajero frecuente, quiero una función calcular_millas(viajes) que reciba el número de viajes realizados
- y sume millas según la distancia:
+Como viajero frecuente, quiero una función calcular_millas(viajes) que reciba
+el número de viajes realizados y sume millas según la distancia:
 
 Viaje corto (< 1000 km): 500 millas
 Medio (1000–3000 km): 1000 millas
@@ -216,8 +216,70 @@ Largo (> 3000 km): 2000 millas
 Debe repetirse hasta que el usuario escriba “fin” y mostrar el total acumulado."""
 
 def calcular_millas(viajes):
-    viaje_corto = 1000
+    #Millas
+    corto = 500
+    medio = 1000
+    largo = 2000
+    #Input
     
-viaje_medio = range(1000, 3001)
-print(viaje_medio)
+    
+    #Contador
+    cont = 0
+    i = 1
+    while i <= viajes:
+        millas = input("Ingrese la cantidad de km recorridos (O escriba fin para terminar)")
+        
+        if millas.lower() == "fin":
+            print(f"Por {i} viajes, total millas acumuladas: {cont}")
+            break
+        
+        else:
+            millas = int(millas)
+            if millas in range (0,1001):
+                print(f"Ganaste {corto} millas")
+                cont += corto
+            elif millas in range(1000, 3001):
+                print(f"Ganaste {medio} millas")
+                cont += medio
+            elif millas > 3000:
+                print(f"Ganaste {largo} millas")
+                cont += largo
+    else: 
+        print(f"Por {viajes} viajes, total millas acumuladas: {cont}")
+        
+# viajes = int(input("Ingrese la cantidad de viajes realizados"))
+
+# calcular_millas(viajes)
+
+
+"""12. Hospital “Salud Total” – Evaluador de signos vitales
+Como médico, quiero una función evaluar_paciente() que reciba frecuencia cardiaca y temperatura corporal.
+Si ambos valores están fuera del rango normal (FC > 100 o Temp > 38), mostrar “Paciente en observación”.
+Repetir el proceso con varios pacientes en un bucle while."""
+
+def evaluar_paciente(fC, tC):
+    if fC > 100 and tC > 38:
+        print("Paciente en observación")
+    else:
+        print("Ta bien")
+
+cantidad_pacientes = int(input("Ingrese la cantidad de pacientes a evaluar"))
+
+i = 1
+while i <= cantidad_pacientes:
+    print(f"paciente {i}")
+    fC = int(input("Ingrese la frecuencia cardiaca"))
+    tC = int(input("Ingrese la temperatura corporal"))
+    evaluar_paciente(fC, tC)
+    i +=1
+    
+
+
+            
+             
+        
+        
+        
+        
+    
 
