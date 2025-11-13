@@ -174,19 +174,50 @@ Si el número de compra es múltiplo de 3, agregar 10 puntos; en caso
 contrario, agregar 5.
 Al final, mostrar los puntos totales."""
 
-def calcular_puntos(compras):
-    puntos = 0
-    for i in range(1, compras):
-        if i %3 == 0:
-            puntos += 10
-            print(puntos)
-        else:
-            puntos += 5
-            print(puntos)
-    print("Total de puntos: ", puntos)
-        
-compras = int(input("Ingrese la cantidad de compras: "))
-
-calcular_puntos(compras)
+# def calcular_puntos(compras):
+#     puntos = 0
+#     for i in range(1, compras):
+#         if i %3 == 0:
+#             puntos += 10
             
+#         else:
+#             puntos += 5
+            
+#     return puntos
+        
+# compras = int(input("Ingrese la cantidad de compras: "))
+
+# print(calcular_puntos(compras))
+            
+
+"""10. Academia “CodeStart” – Tabla de multiplicar personalizada
+Como estudiante, quiero una función tabla_multiplicar(numero) que use un for para mostrar la tabla del número dado hasta el 10.
+Si el resultado es mayor de 50, mostrar también “Resultado alto”."""
+
+# def tabla_multiplicar(numero):
+#     for i in range(1, 11):
+#         total = i * numero
+#         if total > 50:
+#             print(f"{numero} X {i} = {total} Resultado alto")
+#         else:
+#             print(f"{numero} X {i} = {total}")
+
+# numero = int(input("Ingrese un número para hacer la tabla de dicho número hasta el 10: "))
+
+# tabla_multiplicar(numero)
+
+"""11. Aerolínea “FlyLoop” – Cálculo de millas acumuladas
+Como viajero frecuente, quiero una función calcular_millas(viajes) que reciba el número de viajes realizados
+ y sume millas según la distancia:
+
+Viaje corto (< 1000 km): 500 millas
+Medio (1000–3000 km): 1000 millas
+Largo (> 3000 km): 2000 millas
+Debe repetirse hasta que el usuario escriba “fin” y mostrar el total acumulado."""
+
+def calcular_millas(viajes):
+    viaje_corto = 1000
+    
+viaje_medio = range(1000, 3001)
+print(viaje_medio)
 
